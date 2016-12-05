@@ -1,0 +1,17 @@
+<div class="col-sm-2 col-xs-3 chart-container">
+    <h5 class="row text-muted truncate text-light" ng-bind="'Metrics'"></h5>
+    <div class="row metric-container">
+        <p class="metric col-xs-6 glyphicon {{display.metrics[data.test.trend || 'default']}}" ng-class="data.test.status.key">
+            <i class="metric-val" ng-bind="data.test.val"></i>
+        </p>
+        <p class="metric col-xs-6 glyphicon {{display.metrics[data.security.trend || 'default']}}" ng-class="data.security.status.key">
+            <i class="metric-val" ng-bind="data.security.val"></i>
+        </p>
+        <p class="metric col-xs-6 glyphicon {{display.metrics[data.maintainability.trend || 'default']}}" ng-class="data.maintainability.status.key">
+            <i class="metric-val" ng-bind="data.maintainability.val"></i>
+        </p>
+        <p class="metric col-xs-6 glyphicon {{display.metrics[data.workmanship.trend || 'default']}}" ng-class="data.workmanship.status.key">
+            <i class="metric-val" ng-bind="data.workmanship.val"></i>
+        </p>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div data-ng-repeat="row in data" class="pipeline-container {{row.result.status.short}}" ng-class="{'expanded' : display.arr[$index]}"
+  ng-click="display.toggleDisplay($index)">
+  <div class="row head" ng-class="{'expanded' : display.arr[$index]}">
+    <div class="type col-xs-1">
+      <span class="glyphicon glyphicon-tasks type-icon" ng-class="row.result.status.short" ng-show="row.type==='changelist'"></span>
+      <span class="glyphicon glyphicon-fire type-icon" ng-class="row.result.status.short" ng-show="row.type==='build'"></span>
+    </div>
+    <div class="username col-xs-2" ng-bind="row.owner.userName || '--'"></div>
+    <div class="start-time col-xs-2 visible-md visible-lg box-container">
+      <span class="row" ng-bind="row.start | date : 'mediumDate'"></span>
+      <span class="row" ng-bind="row.start | date : 'mediumTime'"></span>
+    </div>
+    <status-blip blip="Metrics" data="row.metrics"></status-blip>
+    <status-blip blip="Build" data="row.build"></status-blip>
+    <status-blip blip="Unit Tests" data="row.unitTest"></status-blip>
+    <status-blip blip="Functional Tests" data="row.functionalTest"></status-blip>
+  </div>
+
+  <div class="row drawer" ng-if="display.arr[$index]">
+    <metrics-drawer data="row.metrics" display="display"></metrics-drawer>
+    <builds-drawer data="row.build" display="display"></builds-drawer>
+    <unit-tests-drawer data="row.unitTest" display="display"></unit-tests-drawer>
+    <functional-tests-drawer data="row.functionalTest" display="display"></functional-tests-drawer>
+    <results-drawer data="row.result" display="display"></results-drawer>
+  </div>
+</div>

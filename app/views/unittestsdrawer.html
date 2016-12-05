@@ -1,0 +1,16 @@
+<div class="col-sm-2 col-xs-3 chart-container">
+    <h5 class="row text-muted truncate text-light" ng-bind="'Unit Tests'"></h5>
+    <div class="row wrap">
+        <div class="default" ng-class="data.status.key" ng-if="data.status.key === 'pending'">
+            <i class="glyphicon glyphicon-remove-circle"></i>
+        </div>
+        <canvas id="unit" class="chart chart-pie text-muted" chart-data="[data.tests.pass, data.tests.total - data.tests.pass]"
+            chart-labels="['Pass', 'Fail']" height="50" width="100" ng-if="data.status.key !== 'pending'">
+        </canvas>
+        <div class="default" ng-class="data.status.key" ng-if="data.status.key === 'pending'">
+            <i class="glyphicon glyphicon-remove-circle"></i></div>
+        <canvas id="unit-coverage" class="chart chart-doughnut" chart-data="[data.coverage, 100 - data.coverage]"
+            chart-labels="['Covered', 'Not Covered']" height="50" width="130" ng-if="data.status.key !== 'pending'">
+        </canvas>
+    </div>
+</div>

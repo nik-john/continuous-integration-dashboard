@@ -1,0 +1,19 @@
+<div class="col-sm-2 col-xs-3 chart-container">
+    <h5 class="row text-muted truncate text-light" ng-bind="'Build'"></h5>
+    <div class="default" ng-class="data.debug.status" ng-if="data.debug.status === 'pending'">
+        <i class="glyphicon glyphicon-remove-circle"></i>
+    </div>
+
+    <p class="build-icon" ng-class="data.debug.status" ng-if="data.debug.status !== 'pending'">
+        <i class="glyphicon glyphicon-wrench"></i>
+        <span ng-bind="'Debug'" class="build-title  text-light"></span>
+    </p>
+
+    <div class="default" ng-class="data.release.status" ng-if="data.release.status === 'pending'">
+        <i class="glyphicon glyphicon-remove-circle"></i>
+    </div>
+    <p class="build-icon" ng-class="data.release.status" ng-if="data.release.status !== 'pending'">
+        <i class="glyphicon glyphicon-gift"></i>
+        <span ng-bind="'Release'" class="build-title text-light"></span>
+    </p>
+</div>
