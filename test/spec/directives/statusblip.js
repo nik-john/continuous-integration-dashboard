@@ -4,7 +4,6 @@ describe('Directive: statusBlip', function () {
 
   // load the directive's module
   beforeEach(module('crossoverCiDashboardApp'));
-
   beforeEach(module('template-module'));
 
   var element,
