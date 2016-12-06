@@ -9,7 +9,7 @@
 angular.module('crossoverCiDashboardApp')
   .directive('functionalTestsDrawer', function () {
     return {
-      templateUrl: '/views/functionaltestsdrawer.html',
+      templateUrl: 'views/functionaltestsdrawer.html',
       restrict: 'E',
       scope: {
         data: '='

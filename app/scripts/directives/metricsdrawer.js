@@ -9,11 +9,12 @@
 angular.module('crossoverCiDashboardApp')
   .directive('metricsDrawer', function () {
     return {
-      templateUrl: '/views/metricsdrawer.html',
+      templateUrl: 'views/metricsdrawer.html',
       restrict: 'E',
       scope: {
         blip: '@',
         data: '=',
+        display: '='
       },
       replace: true
     };
