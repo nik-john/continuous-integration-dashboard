@@ -9,7 +9,7 @@
 angular.module('crossoverCiDashboardApp')
   .directive('statusBlip', function () {
     return {
-      templateUrl: '/views/statusblip.html',
+      templateUrl: 'views/statusblip.html',
       restrict: 'E',
       scope: {
         blip: '@',
