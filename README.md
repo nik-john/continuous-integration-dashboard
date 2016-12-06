@@ -9,3 +9,11 @@ Run `grunt` for building and `grunt serve` for preview.
 ## Testing
 
 Running `grunt test` will run the unit tests with Karma.
+
+## TODO:
+
+- [ ] Unit Test pre-commit hook
+- [ ] Unit tests for all directives
+- [ ] Unit tests for all services
+- [x] Unit tests for all controllers
+- [ ] Incorporate ng-animate
