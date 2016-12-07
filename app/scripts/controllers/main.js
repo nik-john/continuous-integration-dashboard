@@ -19,10 +19,10 @@ angular.module('crossoverCiDashboardApp')
         $scope.display.arr = arr;
       },
       metrics: {
-        up: 'glyphicon-arrow-up',
-        down: 'glyphicon-arrow-down',
-        equal: 'glyphicon-record',
-        default: 'glyphicon glyphicon-minus'
+        up: 'glyphicon-arrow-up pass',
+        down: 'glyphicon-arrow-down fail',
+        equal: 'glyphicon-record equal',
+        default: 'glyphicon glyphicon-minus pending'
       }
     };
     $scope.data = BuildData.getData().map(function (item) {
