@@ -231,6 +231,10 @@ $grey-base:              #ddd;
             }
             .pending {
                 background: $grey-base;
+                &.type-icon {
+                    background: transparent;
+                    color: $grey-base;
+                }
             }
         }
     }

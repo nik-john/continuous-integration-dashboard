@@ -101,167 +101,66 @@ angular.module('crossoverCiDashboardApp')
       },
       'status': {
         'short': 'fail',
-        'key': 'change_rejected',
-        'label': 'Change Rejected'
+        'key': 'build_failed',
+        'label': 'Build Failed'
       }
     }
-  };
-  var passBuild =   {
-    'type': 'build',
-    'id': '5842dcffed2d17b7511bf8cc',
-    'owner': {
-      'userName': 'tpriy'
-    },
-    'start': 'Fri Nov 04 2016 11:04:37 GMT+0000 (UTC)',
-    'metrics': {
-      'status': {
-        'label': 'Pass',
-        'key': 'pass',
-        'status': {
-          'label': 'Pass',
-          'key': 'pass'
-        }
-      },
-      'workmanship': {
-        'trend': 'equal',
-        'val': 69,
-        'status': {
-          'label': 'Pass',
-          'key': 'pass'
-        }
-      },
-      'security': {
-        'trend': 'up',
-        'val': 38,
-        'status': {
-          'label': 'Pass',
-          'key': 'pass'
-        }
-      },
-      'maintainability': {
-        'trend': 'up',
-        'val': 40,
-        'status': {
-          'label': 'Pass',
-          'key': 'pass'
-        }
-      },
-      'test': {
-        'trend': 'up',
-        'val': 82,
-        'status': {
-          'label': 'Pass',
-          'key': 'pass'
-        }
-      }
-    },
-    'build': {
-      'release': {
-        'status': 'pass'
-      },
-      'debug': {
-        'status': 'pass'
-      },
-      'status': {
-          'label': 'Pending',
-          'key': 'pending'
-        }
-    },
-    'unitTest': {
-      'tests': {
-        'pass': 800,
-        'total': 1000
-      },
-      'coverage': 23,
-      'status': {
-        'key': 'pass',
-        'label': 'Pass'
-      }
-    },
-    'functionalTest': {
-      'tests': {
-        'pass': 800,
-        'total': 1000
-      },
-      'coverage': 23,
-      'status': {
-        'key': 'pass',
-        'label': 'Pass'
-      }
-    },
-    'result': {
-      'actions': [
-        {
-          'key': 'find_issues',
-          'label': 'Find Issues'
-        }
-      ],
-      'reason': {
-        'key': 'auto_merged',
-        'label': 'Auto-Merged'
-      },
-      'status': {
-        'short': 'accepted',
-        'key': 'change_accepted',
-        'label': 'Change Accepted'
-      }
-    },
   };
   var pendingBuild =   {
     'type': 'build',
     'id': '5842dcffed2d17b7511bf8cc',
     'owner': {
-      'userName': 'tpriy'
+      'userName': 'anair'
     },
-    'start': 'Fri Nov 04 2016 11:04:37 GMT+0000 (UTC)',
+    'start': 'Tue Feb 02 2016 04:40:43 GMT+0000 (UTC)',
     'metrics': {
       'status': {
-        'label': 'Pass',
-        'key': 'pass',
+        'label': 'Pending',
+        'key': 'pending',
         'status': {
-          'label': 'Pass',
-          'key': 'pass'
+          'label': 'Pending',
+          'key': 'pending'
         }
       },
       'workmanship': {
-        'trend': 'equal',
-        'val': 69,
+        'trend': null,
+        'val': null,
         'status': {
-          'label': 'Pass',
-          'key': 'pass'
+          'label': 'Pending',
+          'key': 'pending'
         }
       },
       'security': {
-        'trend': 'up',
-        'val': 38,
+        'trend': null,
+        'val': null,
         'status': {
-          'label': 'Pass',
-          'key': 'pass'
+          'label': 'Pending',
+          'key': 'pending'
         }
       },
       'maintainability': {
-        'trend': 'up',
-        'val': 40,
+        'trend': null,
+        'val': null,
         'status': {
-          'label': 'Pass',
-          'key': 'pass'
+          'label': 'Pending',
+          'key': 'pending'
         }
       },
       'test': {
-        'trend': 'up',
-        'val': 82,
+        'trend': null,
+        'val': null,
         'status': {
-          'label': 'Pass',
-          'key': 'pass'
+          'label': 'Pending',
+          'key': 'pending'
         }
       }
     },
     'build': {
       'release': {
-        'status': 'pass'
+        'status': 'pending'
       },
       'debug': {
-        'status': 'pass'
+        'status': 'pending'
       },
       'status': {
           'label': 'Pending',
@@ -270,13 +169,13 @@ angular.module('crossoverCiDashboardApp')
     },
     'unitTest': {
       'tests': {
-        'pass': 800,
-        'total': 1000
+        'pass': null,
+        'total': null
       },
       'coverage': 23,
       'status': {
-        'key': 'pass',
-        'label': 'Pass'
+        'key': 'pending',
+        'label': 'Pending'
       }
     },
     'functionalTest': {
@@ -287,58 +186,83 @@ angular.module('crossoverCiDashboardApp')
       'coverage': null,
       'status': {
         'key': 'pending',
-        'label': 'Pass'
+        'label': 'Pending'
       }
     },
     'result': {
       'actions': [
-        {
-          'key': 'find_issues',
-          'label': 'Find Issues'
-        }
       ],
       'reason': {
-        'key': 'auto_merged',
-        'label': 'Auto-Merged'
+        'key': 'not_started',
+        'label': 'Not Started'
       },
       'status': {
-        'short': 'accepted',
-        'key': 'change_accepted',
-        'label': 'Change Accepted'
+        'short': 'pending',
+        'key': 'pending',
+        'label': 'Scheduled'
       }
-    },
+    }
   };
-  
-
-
-  var failedCl =   {
-    'result': {
-      'actions': [
-        {
-          'key': 'find_issues',
-          'label': 'Find Issues'
-        }
-      ],
-      'reason': {
-        'key': 'auto_merged',
-        'label': 'Auto-Merged'
-      },
+  var passBuild1 =   {
+    'type': 'build',
+    'id': '5842dcffed2d17b7511bf8cc',
+    'owner': {
+      'userName': 'ajones'
+    },
+    'start': 'Fri Nov 04 2016 11:04:37 GMT+0000 (UTC)',
+    'metrics': {
       'status': {
-        'short': 'accepted',
-        'key': 'change_accepted',
-        'label': 'Change Accepted'
+        'label': 'Pass',
+        'key': 'pass',
+        'status': {
+          'label': 'Pass',
+          'key': 'pass'
+        }
+      },
+      'workmanship': {
+        'trend': 'up',
+        'val': 69,
+        'status': {
+          'label': 'Pass',
+          'key': 'pass'
+        }
+      },
+      'security': {
+        'trend': 'up',
+        'val': 38,
+        'status': {
+          'label': 'Pass',
+          'key': 'pass'
+        }
+      },
+      'maintainability': {
+        'trend': 'up',
+        'val': 40,
+        'status': {
+          'label': 'Pass',
+          'key': 'pass'
+        }
+      },
+      'test': {
+        'trend': 'up',
+        'val': 82,
+        'status': {
+          'label': 'Pass',
+          'key': 'pass'
+        }
       }
     },
-    'functionalTest': {
-      'tests': {
-        'pass': 800,
-        'total': 1000
+    'build': {
+      'release': {
+        'status': 'pass'
       },
-      'coverage': 23,
+      'debug': {
+        'status': 'pass'
+      },
       'status': {
-        'key': 'pass',
-        'label': 'Pass'
-      }
+          'label': 'Pass',
+          'key': 'pass'
+        }
     },
     'unitTest': {
       'tests': {
@@ -351,114 +275,42 @@ angular.module('crossoverCiDashboardApp')
         'label': 'Pass'
       }
     },
-    'build': {
-      'release': {
-        'status': 'fail'
+    'functionalTest': {
+      'tests': {
+        'pass': 500,
+        'total': 800
       },
-      'debug': {
-        'status': 'fail'
-      },
+      'coverage': 90,
       'status': {
-          'label': 'Pending',
-          'key': 'pending'
-        }
-    },
-    'metrics': {
-      'status': {
-        'label': 'Pass',
-        'key': 'pass'
-      },
-      'workmanship': {
-        'trend': 'down',
-        'val': 97,
-        'status': {
-          'label': 'Pass',
-          'key': 'pass'
-        }
-      },
-      'security': {
-        'trend': 'equal',
-        'val': 60,
-        'status': {
-          'label': 'Pass',
-          'key': 'pass'
-        }
-      },
-      'maintainability': {
-        'trend': 'up',
-        'val': 63,
-        'status': {
-          'label': 'Pass',
-          'key': 'pass'
-        }
-      },
-      'test': {
-        'trend': 'equal',
-        'val': 93,
-        'status': {
-          'label': 'Pass',
-          'key': 'pass'
-        }
+        'key': 'pass',
+        'label': 'Pass'
       }
     },
+    'result': {
+      'actions': [
+        {
+          'key': 'merged_build',
+          'label': 'Merged Build'
+        }
+      ],
+      'reason': {
+        'key': 'auto_merged',
+        'label': 'Auto-Merged'
+      },
+      'status': {
+        'short': 'pass',
+        'key': 'build_pass',
+        'label': 'Build Passed'
+      }
+    },
+  };
+  var passBuild2 = Object.assign({}, passBuild1, {id: '5842dcff2ed90090b59csd32', owner: {userName: 'bditta'}});
+  var failedCl =   {
+    'type': 'firewall',
+    'id': '5842dcff2ed90090b59cb2cd',
     'start': 'Thu Jun 09 2016 18:03:17 GMT+0000 (UTC)',
     'owner': {
-      'userName': 'gmenon'
-    },
-    'id': '5842dcff2ed90090b59cb2cd',
-    'type': 'build'
-  };
-  var passCl =   {
-    'result': {
-      'actions': [
-        {
-          'key': 'find_issues',
-          'label': 'Find Issues'
-        }
-      ],
-      'reason': {
-        'key': 'auto_merged',
-        'label': 'Auto-Merged'
-      },
-      'status': {
-        'short': 'accepted',
-        'key': 'change_accepted',
-        'label': 'Change Accepted'
-      }
-    },
-    'functionalTest': {
-      'tests': {
-        'pass': 800,
-        'total': 1000
-      },
-      'coverage': 23,
-      'status': {
-        'key': 'pass',
-        'label': 'Pass'
-      }
-    },
-    'unitTest': {
-      'tests': {
-        'pass': 800,
-        'total': 1000
-      },
-      'coverage': 23,
-      'status': {
-        'key': 'pass',
-        'label': 'Pass'
-      }
-    },
-    'build': {
-      'release': {
-        'status': 'fail'
-      },
-      'debug': {
-        'status': 'pass'
-      },
-      'status': {
-          'label': 'Pending',
-          'key': 'pending'
-        }
+      'userName': null
     },
     'metrics': {
       'status': {
@@ -467,7 +319,7 @@ angular.module('crossoverCiDashboardApp')
       },
       'workmanship': {
         'trend': 'down',
-        'val': 97,
+        'val': 60,
         'status': {
           'label': 'Pass',
           'key': 'pass'
@@ -498,53 +350,6 @@ angular.module('crossoverCiDashboardApp')
         }
       }
     },
-    'start': 'Sat Aug 27 2016 01:58:59 GMT+0000 (UTC)',
-    'owner': {
-      'userName': 'adeep'
-    },
-    'id': '5842dcff57a5316e0b526262',
-    'type': 'build'
-  };
-  var pendingCl =   {
-    'result': {
-      'actions': [
-        {
-          'key': 'find_issues',
-          'label': 'Find Issues'
-        }
-      ],
-      'reason': {
-        'key': 'auto_merged',
-        'label': 'Auto-Merged'
-      },
-      'status': {
-        'short': 'accepted',
-        'key': 'change_accepted',
-        'label': 'Change Accepted'
-      }
-    },
-    'functionalTest': {
-      'tests': {
-        'pass': 800,
-        'total': 1000
-      },
-      'coverage': 23,
-      'status': {
-        'key': 'pass',
-        'label': 'Pass'
-      }
-    },
-    'unitTest': {
-      'tests': {
-        'pass': 800,
-        'total': 1000
-      },
-      'coverage': 23,
-      'status': {
-        'key': 'pass',
-        'label': 'Pass'
-      }
-    },
     'build': {
       'release': {
         'status': 'pass'
@@ -553,57 +358,245 @@ angular.module('crossoverCiDashboardApp')
         'status': 'fail'
       },
       'status': {
-          'label': 'Pending',
-          'key': 'pending'
+          'label': 'Fail',
+          'key': 'fail'
         }
     },
-    'metrics': {
+    'unitTest': {
+      'tests': {
+        'pass': null,
+        'total': null
+      },
+      'coverage': null,
       'status': {
-        'label': 'Pass',
-        'key': 'pass'
-      },
-      'workmanship': {
-        'trend': 'down',
-        'val': 97,
-        'status': {
-          'label': 'Pass',
-          'key': 'pass'
-        }
-      },
-      'security': {
-        'trend': 'equal',
-        'val': 60,
-        'status': {
-          'label': 'Pass',
-          'key': 'pass'
-        }
-      },
-      'maintainability': {
-        'trend': 'up',
-        'val': 63,
-        'status': {
-          'label': 'Pass',
-          'key': 'pass'
-        }
-      },
-      'test': {
-        'trend': 'equal',
-        'val': 93,
-        'status': {
-          'label': 'Pass',
-          'key': 'pass'
-        }
+        'key': 'pending',
+        'label': 'Pending'
       }
     },
-    'start': 'Fri Sep 02 2016 21:52:19 GMT+0000 (UTC)',
-    'owner': {
-      'userName': 'tpriy'
+     'functionalTest': {
+      'tests': {
+        'pass': null,
+        'total': null
+      },
+      'coverage': null,
+      'status': {
+        'key': 'pending',
+        'label': 'Pending'
+      }
     },
-    'id': '5842dcff80de13f4b192ad62',
-    'type': 'build'
+    'result': {
+      'actions': [
+        {
+          'key': 'find_issues',
+          'label': 'Find Issues'
+        }
+      ],
+      'reason': {
+        'key': 'release_build_failed',
+        'label': 'Release Build Failed'
+      },
+      'status': {
+        'short': 'rejected',
+        'key': 'change_rejected',
+        'label': 'Firewall Rejected'
+      }
+    },
   };
 
-  var data = [failedBuild, passBuild, pendingBuild, failedCl, passCl, pendingCl];
+  var passCl =   {
+    'start': 'Sat Aug 27 2016 01:58:59 GMT+0000 (UTC)',
+    'owner': {
+      'userName': null
+    },
+    'id': '5842dcff57a5316e0b526262',
+    'type': 'firewall',
+    'metrics': {
+      'status': {
+        'label': 'Pass',
+        'key': 'pass'
+      },
+      'workmanship': {
+        'trend': 'down',
+        'val': 97,
+        'status': {
+          'label': 'Pass',
+          'key': 'pass'
+        }
+      },
+      'security': {
+        'trend': 'equal',
+        'val': 60,
+        'status': {
+          'label': 'Pass',
+          'key': 'pass'
+        }
+      },
+      'maintainability': {
+        'trend': 'up',
+        'val': 63,
+        'status': {
+          'label': 'Pass',
+          'key': 'pass'
+        }
+      },
+      'test': {
+        'trend': 'equal',
+        'val': 93,
+        'status': {
+          'label': 'Pass',
+          'key': 'pass'
+        }
+      }
+    },
+     'build': {
+      'release': {
+        'status': 'pass'
+      },
+      'debug': {
+        'status': 'pass'
+      },
+      'status': {
+          'label': 'Pass',
+          'key': 'pass'
+        }
+    },
+    'unitTest': {
+      'tests': {
+        'pass': 800,
+        'total': 1000
+      },
+      'coverage': 23,
+      'status': {
+        'key': 'pass',
+        'label': 'Pass'
+      }
+    },
+     'functionalTest': {
+      'tests': {
+        'pass': 800,
+        'total': 1000
+      },
+      'coverage': 23,
+      'status': {
+        'key': 'pass',
+        'label': 'Pass'
+      }
+    },
+    'result': {
+      'actions': [
+        {
+          'key': 'find_issues',
+          'label': 'Find Issues'
+        }
+      ],
+      'reason': {
+        'key': 'auto_merged',
+        'label': 'Auto-Merged'
+      },
+      'status': {
+        'short': 'accepted',
+        'key': 'firewall_accepted',
+        'label': 'Firewall Accepted'
+      }
+    }
+  };
+
+  var pendingCl =   {
+    'start': 'Fri Sep 02 2016 21:52:19 GMT+0000 (UTC)',
+    'owner': {
+      'userName': null
+    },
+    'id': '5842dcff80de13f4b192ad62',
+    'type': 'firewall',
+    'metrics': {
+      'status': {
+        'label': 'Pass',
+        'key': 'pass'
+      },
+      'workmanship': {
+        'trend': 'down',
+        'val': 97,
+        'status': {
+          'label': 'Pass',
+          'key': 'pass'
+        }
+      },
+      'security': {
+        'trend': 'equal',
+        'val': 60,
+        'status': {
+          'label': 'Pass',
+          'key': 'pass'
+        }
+      },
+      'maintainability': {
+        'trend': 'up',
+        'val': 63,
+        'status': {
+          'label': 'Pass',
+          'key': 'pass'
+        }
+      },
+      'test': {
+        'trend': 'up',
+        'val': 93,
+        'status': {
+          'label': 'Pass',
+          'key': 'pass'
+        }
+      }
+    },
+    'build': {
+      'release': {
+        'status': 'pass'
+      },
+      'debug': {
+        'status': 'pass'
+      },
+      'status': {
+          'label': 'Pass',
+          'key': 'pass'
+        }
+    },
+     'unitTest': {
+      'tests': {
+        'pass': null,
+        'total': null
+      },
+      'coverage': null,
+      'status': {
+        'key': 'pending',
+        'label': 'Pending'
+      }
+    },
+    
+    'functionalTest': {
+      'tests': {
+        'pass': null,
+        'total': null
+      },
+      'coverage': null,
+      'status': {
+        'key': 'pending',
+        'label': 'Pending'
+      }
+    },
+    'result': {
+      'actions': [
+      ],
+      'reason': {
+        'key': 'running_unit_tests',
+        'label': 'Running Unit Tests'
+      },
+      'status': {
+        'short': 'running',
+        'key': 'running',
+        'label': 'Running'
+      }
+    }
+  };
+
+  var data = [passBuild1, passBuild2, failedCl, pendingBuild, failedBuild, passCl, pendingCl];
 
     // Public API here
     return {
