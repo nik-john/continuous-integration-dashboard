@@ -19,12 +19,11 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      'node_modules/phantomjs-polyfill-object-assign/object-assign-polyfill.js',
       // bower:js
       'bower_components/jquery/dist/jquery.js',
       'bower_components/angular/angular.js',
       'bower_components/angular-animate/angular-animate.js',
-      'bower_components/angular-ui-grid/ui-grid.js',
-      'bower_components/angular-ui-grid/ui-grid.min.js',
       'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js',
       'bower_components/chart.js/dist/Chart.js',
       'bower_components/angular-chart.js/dist/angular-chart.js',
@@ -42,7 +41,7 @@ module.exports = function(config) {
     },
 
     ngHtml2JsPreprocessor: {
-      stripPrefix: 'app',
+      stripPrefix: 'app/',
       moduleName: 'template-module'
     },
     // list of files / patterns to exclude

@@ -1,0 +1,23 @@
+.footer {
+    .container-fluid {   
+    border-top: 1px solid #ddd;  
+        .row {
+            .container {
+                .row {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    align-items: center;
+                    padding: 1rem;
+                    span {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding: 1rem;
+                        padding-right: 0rem;
+                    }
+                }
+            }
+        }      
+    }
+}

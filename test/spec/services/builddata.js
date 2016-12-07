@@ -12,7 +12,7 @@ describe('Service: BuildData', function () {
   }));
 
   it('should do something', function () {
-    expect(BuildData.getData().length).toEqual(6);
+    expect(BuildData.getData().length).toEqual(7);
   });
 
 });
